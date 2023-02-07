@@ -92,6 +92,16 @@ public class App {
 
 					System.out.printf("%4d	/    %6s    /   %4d\n", article.id, article.title, article.hit);
 				}
+			} else if (command.equals("member list")) {
+				if (members.size() == 0) {
+					System.out.println("회원이 없습니다");
+					continue;
+				}
+				System.out.println("아이디    /     이름    /   가입일자   ");
+				for (int i = members.size() - 1; i >= 0; i--) {
+					Member member = members.get(i);
+					System.out.printf("%4s	/    %6s    /   %4s\n", member.loginId, member.name, member.regDate);
+				}
 			} else if (command.equals("article write")) {
 				int id = articles.size() + 1;
 				String regDate = Util.getNowDateStr();
