@@ -1,4 +1,4 @@
-package com.KoreaIT.java.Basic.Review;
+package com.KoreaIT.java.Basic.Review.util;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
